@@ -13,11 +13,16 @@ Problem Statement:  Write a Python program that:
 3. 	Displays the result accordingly.
 """
 
-userInput = int(input("Enter the number: "))
-if(userInput % 2 == 0):
-  print(f'{userInput} is an even number')
-else:
-  print(f'{userInput} is an odd number')
+try:
+  userInput = int(input("Enter the number: "))
+  if(userInput % 2 == 0):
+    print(f'{userInput} is an even number')
+  else:
+    print(f'{userInput} is an odd number')
+except ZeroDivisionError:
+  print("You cannot enter other number than zero")
+except ValueError:
+  print("Please enter valid number")
 
 """Task 2: Sum of Integers from 1 to 50 Using a Loop
 
